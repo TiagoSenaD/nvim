@@ -10,17 +10,19 @@ return require('packer').startup(function(use)
   --colorscheme
   use 'rebelot/kanagawa.nvim'
 
-  --Term
-  use 'voldikss/vim-floaterm'
+  --copilot
+  use 'github/copilot.vim'
 
   --treesitter
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
+  --[[ Term
+  use 'voldikss/vim-floaterm'
+
+
   --airline
   use 'vim-airline/vim-airline'
 
-  --copilot
-  use 'github/copilot.vim'
 
   --LSP
   use {
@@ -37,6 +39,6 @@ return require('packer').startup(function(use)
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'L3MON4D3/LuaSnip'},
 	  }
-  }
+  }]]
 
 end)

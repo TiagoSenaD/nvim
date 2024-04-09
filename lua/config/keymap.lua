@@ -1,5 +1,5 @@
-vim.keymap.set('n', '<Switch>', '<NOP>', {noremap = true, silent = true})
 vim.g.mapleader = ' ' --making <Space> the leader key
+vim.keymap.set('n', '<Switch>', '<NOP>', {noremap = true, silent = true})
 
 --Switch hl
 vim.keymap.set('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
@@ -25,21 +25,11 @@ vim.keymap.set('n', '<A-Right>', ':tabnext<CR>', {noremap = true, silent = true}
 vim.keymap.set('n', '<A-Left>', ':tabNext<CR>', {noremap = true, silent = true})
 vim.keymap.set('n', '<A-S-Right>', ':tabmove +1<CR>', {noremap = true, silent = true})
 vim.keymap.set('n', '<A-S-Left>', ':tabmove -1<CR>', {noremap = true, silent = true})
-vim.keymap.set('n', '<Leader>z', ':tabnew | Explore<CR>', {noremap = true, silent = true})
-vim.keymap.set('n', '<Leader>x', ':tabclose<CR>', {noremap = true, silent = true})
-
---Tabs hjkl
---vim.keymap.set('n', '<A-h>', ':tabnext<CR>', {noremap = true, silent = true})
---vim.keymap.set('n', '<A-l>', ':tabNext<CR>', {noremap = true, silent = true})
---vim.keymap.set('n', '<A-S-h>', ':tabmove +1<CR>', {noremap = true, silent = true})
---vim.keymap.set('n', '<A-S-l>', ':tabmove -1<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<Leader>z', ':tabe .<CR>', {noremap = true, silent = true})
 
 --Buffer
 vim.keymap.set('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})
-vim.keymap.set('n', '<Leader><TAB>', ':bdelete<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<Leader><TAB>', ':bwipeout<CR>', {noremap = true, silent = true})
 
---<ESC> options
-vim.keymap.set('i', 'jk', '<ESC>', {noremap = true, silent = true})
-vim.keymap.set('i', 'kj', '<ESC>', {noremap = true, silent = true})
-vim.keymap.set('i', 'jj', ':<ESC>', {noremap = true, silent = true})
-vim.keymap.set('i', 'KK', ':<ESC>', {noremap = true, silent = true})
+--Left Explorer
+vim.keymap.set('n', '<Leader>f', ':Lex<CR>:vertical resize 30<CR>', {noremap = true, silent = true})
